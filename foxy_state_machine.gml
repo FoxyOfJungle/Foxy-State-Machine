@@ -54,8 +54,6 @@ function StateMachine(states_array, states_anim_array=undefined) constructor {
 	static Update = function() {
 		if (__current_state != undefined) {
 			if (__current_state.step_func != undefined) __current_state.step_func();
-		}
-		if (__current_state != undefined) {
 			if (__current_state.anim_func != undefined) __current_state.anim_func();
 		}
 		if (__any_state__ != undefined) {
